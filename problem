@@ -1,0 +1,13 @@
+def solution(babbling):
+    can = ["aya", "ye", "woo", "ma"]
+    cnt = 0
+    for i in range(len(babbling)):
+        for j in range(0, 4):
+            if can[j] in babbling[i]:
+                babbling[i] = babbling[i].replace(can[j], ' ')
+                cnt += 1
+
+
+            return cnt
+babbling = ["aya", "yee", "u", "maa", "wyeoo"]
+print(solution(babbling))
